@@ -1,0 +1,11 @@
+module ALUControlUnit(ALUOp0,ALUOp1,F,Operation);
+    input ALUOp0,ALUOp1;
+    input [5:0] F;
+    output [2:0] Operation;
+    wire w1,w2;
+    and(w1,F[0],F[3]);
+    nand(Operation[1],ALUOp1,F[2]);
+    and(w2,F[1],ALUOp1);
+    and(Operation[0],ALUOp1,w1);
+    or(Operation[2],w2,ALUOp0);
+endmodule;

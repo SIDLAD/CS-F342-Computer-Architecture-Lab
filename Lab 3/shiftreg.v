@@ -15,7 +15,7 @@ module shiftreg(EN, in, CLK, Q);
     output [n-1:0] Q;
     reg [n-1:0] Q;
     initial
-    Q=4'd10;
+    Q=4'd0;
     always @(posedge CLK)
     begin
         if (EN)
